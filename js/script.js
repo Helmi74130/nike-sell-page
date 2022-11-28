@@ -8,6 +8,7 @@ let bgShoes = document.querySelector('#bgShoes');
 let descriptionContent = document.querySelector('.description');
 let footer = document.querySelector('#footer');
 let images = document.querySelector('.images');
+let lastImg = document.querySelector('#lastImg');
 
 
 let count = 0;
@@ -45,19 +46,52 @@ function shoesParallax(e) {
   bgShoes.style.transform = `rotate(${y}deg)`
 }
 
-  
+window.addEventListener('scroll', ()=>{
+  //console.log(images.getBoundingClientRect().y);
+  if (images.getBoundingClientRect().y < 0 && images.getBoundingClientRect().y < 100) {
+    descriptionContent.classList.add('fixed')
+  }else if (images.getBoundingClientRect().y > 0 && images.getBoundingClientRect().y > 100){
+    descriptionContent.classList.remove('fixed')
+  }
+})
 
-const observerDescr = new IntersectionObserver((entries)=>{
+
+
+const observerLastImg = new IntersectionObserver((entries)=>{
+  if(entries[0].isIntersecting ){
+    descriptionContent.classList.remove('top')
+    descriptionContent.classList.remove('fixed')
+    descriptionContent.classList.add('absolute')
+    console.log('vu');
+  }
+}, {threshold: 0.99});
+
+observerLastImg.observe(lastImg)
+
+
+
+window.addEventListener('scroll', ()=>{
+  //console.log(descriptionContent.getBoundingClientRect().y);
+  if (descriptionContent.getBoundingClientRect().y > 200 && descriptionContent.classList.contains('absolute')) {
+    descriptionContent.classList.add('fixed')
+    descriptionContent.classList.remove('absolute')
+    descriptionContent.classList.add('top')
+  }
+})
+
+
+
+
+/* const observerDescr = new IntersectionObserver((entries)=>{
   if(entries[0].isIntersecting){
-    console.log(entries);
     descriptionContent.classList.add('fixed')
   }
-  console.log(entries);
 }, {threshold: 0.33});
 
 const observerImage = new IntersectionObserver((entries)=>{
   if(!entries[0].isIntersecting){
     descriptionContent.classList.remove('fixed')
+    //descriptionContent.classList.add('absolute')
   }
 }, {threshold: 0.33});
 
@@ -66,4 +100,4 @@ const observerImage = new IntersectionObserver((entries)=>{
 observerImage.observe(images)
 
 observerDescr.observe(descriptionContent)
-
+ */

@@ -1,4 +1,4 @@
-let shipment = document.querySelector('.shipment')
+let shipment = document.querySelector('#shipment')
 let modalShipment = document.querySelector('.modal-shipment')
 let buttonCloseModalshipment = document.querySelector('#buttonCloseModalshipment')
 let shoesDescriptionContent = document.querySelector('.shoes-description-content')

@@ -4,17 +4,19 @@ $lightPink: #F8B9B8;
 
 .fixed{
   position: fixed;
-  height: 100vh;
-  top: 0;
   right: 0;
 }
+
+.top{
+  top: 0;
+}
+
 .prevent-scroll{
   overflow: hidden;
 }
 body{
   overflow-x: hidden;
   background: #F8F8F4;
-  height: 5400px;
 }
 .a{
   background: lightblue;
@@ -270,6 +272,21 @@ header{
       height: 50px;
     }
   }
+  .btn-content{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    .btn-close-modal-shipment{
+      border: none;
+      background: none;
+      font-size: 2em;
+      color: $lightbrown;
+      &:hover{
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
   .modal-title{
     margin-top: 30px;
     margin-bottom: 20px;
@@ -344,11 +361,84 @@ header{
     }
   }
 }
-
+//COMMENT MODAL
+.modal-comments{
+  width: 100%;
+  height: 100%;
+  .img-logo{
+    text-align: center;
+    img{
+      height: 50px;
+    }
+  }
+  h5{
+    margin-top: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .btn-content{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    .btn-close-modal-comments{
+      border: none;
+      background: none;
+      font-size: 2em;
+      color: $lightbrown;
+      &:hover{
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
+  .progress-content{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .progress-status{
+    background: $lightGreen;
+    height: 20px;
+    width: 80%;
+    border-radius: 20px;
+    margin-inline: 10px;
+  }
+  .null{
+    background: $lightbrown;
+  }
+  .users-comments{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.7em;
+    background-color: $lightbrown;
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    .date{
+      font-size: 0.7em;
+    }
+    button{
+      background: black;
+      color: white;
+      font-size: 1em;
+      border-radius: 10px;
+      padding: 5px;
+      transition: 300ms;
+      &:hover{
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0);
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
 .images-description{
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  position: relative;
   .images{
     width: 50%;
     img{
@@ -356,15 +446,23 @@ header{
       width: 100%;
     }
   }
+  .shoes-description-content{
+    margin-top: 50px;
+  }
+  .absolute{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+  }
   .description{
-    padding-top: 50px;
+    //top: 0;
+    right: 0;
     width: 45%;
     display: flex;
     flex-direction: column;
     font-family: 'argon_demoregular';
     line-height: 1.5em;
     font-size: calc(0.5vw + 1vh + 1vmin);
-    
     h2{
       font-family: 'starife_demoregular';
       letter-spacing: 0.2em;
@@ -390,6 +488,18 @@ header{
       &:hover{
         cursor: pointer;
       }
+    }
+    small{
+      font-size: 0.7em;
+    }
+  }
+  #opinion{
+    color: chocolate;
+    &:hover{
+      cursor: pointer;
+    }
+    small{
+      color: grey;
     }
   }
 }
@@ -527,5 +637,69 @@ header{
     -webkit-transform-origin: top;
             transform-origin: top;
     opacity: 1;
+  }
+}
+
+footer{
+  background: rgb(34, 34, 34);
+  color: white;
+  margin-top: 100px;
+  .information{
+    margin-top: 10px;
+    h6{
+      padding-top: 50px;
+      font-size: calc(8vw + 1vh + 1vmin);
+      font-family: 'mortal_waveregular';
+    }
+    p{
+      margin-left: 100px;
+      font-size: calc(1vw + 1vh + 1vmin);
+    }
+  }
+  .newsletter{
+    margin: 20px 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    input{
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 1.5em;
+    }
+    button{
+      margin-top: 5px;
+      font-family: 'argon_demoregular';
+      padding: 15px;
+      border-radius: 10px;
+      background: white;
+      font-size: 1.5em;
+      &:hover{
+        cursor: pointer;
+        background: $lightbrown;
+      }
+    }
+  }
+  .nav{
+    padding-bottom: 50px;
+    margin-top: 50px;
+    font-size: calc(1vw + 1vh + 1vmin);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .nav-section{
+      display: flex;
+      flex-direction: column;
+      p{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      a{
+        margin-top: 10px;
+        color: white;
+        font-size: calc(0.5vw + 1vh + 1vmin);
+        &:hover{
+          color: chocolate;
+        }
+      }
+    }
   }
 }
