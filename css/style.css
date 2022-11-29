@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 .fixed {
   position: fixed;
   right: 0;
@@ -29,7 +33,6 @@ body {
   background: black;
   color: white;
   text-align: center;
-  padding: 2px;
 }
 
 header {
@@ -42,13 +45,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-inline: 20px;
 }
 
 header .left-header-nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .left-header-nav img {
@@ -154,6 +162,21 @@ header .right-header-nav .search input:focus {
   border: 3px solid #C5E8E3;
 }
 
+header .responsive-button {
+  color: white;
+  background: #000;
+  padding: 10px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .responsive-button:hover {
+  cursor: pointer;
+  color: #000;
+  background: none;
+}
+
 .article-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,9 +218,9 @@ header .right-header-nav .search input:focus {
 
 .shoes-content .shoes {
   position: absolute;
-  top: -5%;
-  left: 5%;
-  max-height: 600px;
+  top: 15%;
+  left: 19%;
+  max-height: 400px;
   border-radius: 50%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -279,7 +302,7 @@ header .right-header-nav .search input:focus {
   border-bottom: 1px solid #C0BCB4;
   font-family: 'starife_demoregular';
   letter-spacing: 0.2em;
-  font-size: 1.4em;
+  font-size: calc(0.6vw + 1vh + 1vmin);
 }
 
 .description-content .sizes:hover {
@@ -353,7 +376,7 @@ header .right-header-nav .search input:focus {
   letter-spacing: 0.2em;
   background: none;
   color: #000;
-  font-size: 1.5em;
+  font-size: calc(0.6vw + 1vh + 1vmin);
   border-radius: 10px;
   padding: 10px;
   -webkit-transition: 300ms;
@@ -423,7 +446,8 @@ header .right-header-nav .search input:focus {
 }
 
 .modal .modal-size {
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   right: 0;
   top: 200px;
   width: 35vw;
@@ -945,5 +969,103 @@ footer .social .social-links a {
 
 footer .social .social-links a:hover {
   color: chocolate;
+}
+
+@media only screen and (max-width: 1250px) {
+  .header-nav {
+    z-index: 10;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    background: #F8F8F4;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: calc(2vw + 1vh + 1vmin);
+  }
+  .header-nav a {
+    margin-top: 10px;
+  }
+  header .right-header-nav .search {
+    display: none;
+  }
+  header .right-header-nav a {
+    position: absolute;
+    right: 90px;
+    top: 27px;
+  }
+  header .right-header-nav .header-basket {
+    position: absolute;
+    right: 190px;
+    top: 33px;
+  }
+  .article-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .article-content .shoes-content {
+    width: 100%;
+  }
+  .article-content .description-content {
+    width: 100%;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .article-content .description-content h1 {
+    text-align: center;
+  }
+  .article-content .description-content .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .article-content .description-content .price p {
+    margin-inline: 20px;
+  }
+}
+
+@media only screen and (max-width: 657px) {
+  .title-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .shoes-content .shoes-bg {
+    height: 440px;
+    width: 440px;
+  }
+  .shoes-content .shoes {
+    width: 330px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .shoes-content .shoes-bg {
+    height: 300px;
+    width: 300px;
+  }
+  .shoes-content .shoes {
+    width: 230px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
