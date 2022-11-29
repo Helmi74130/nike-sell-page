@@ -365,7 +365,7 @@ header{
         button{
           padding: 15px 50px;
           border-radius: 40px;
-          font-size: 1.5em;
+          font-size: calc(0.7vw + 1vh + 1vmin);
           background: none;
           border: 2px solid $lightbrown;
           transition: 0.3s;
@@ -794,12 +794,18 @@ footer{
       }
     }
   }
+  .modal .modal-size {
+    width: 70vw;
+  }
 }
 
 @media only screen and (max-width: 657px) {
    .title-content{
     text-align: center;
    }
+   .modal .modal-size {
+    width: 99vw;
+  }
 }
 
 @media only screen and (max-width: 580px) {
@@ -823,5 +829,13 @@ footer{
     .shoes{
       width: 230px;
     }
-  } 
+  }
+  .modal .modal-size .modal-sizes-select .button-content {
+    width: 50%;
+    height: 50px;
+    button{
+      padding: 15px 30px;
+    }
+  }
+  
 }

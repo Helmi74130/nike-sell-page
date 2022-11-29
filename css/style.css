@@ -511,7 +511,7 @@ header .responsive-button:hover {
 .modal .modal-size .modal-sizes-select .button-content button {
   padding: 15px 50px;
   border-radius: 40px;
-  font-size: 1.5em;
+  font-size: calc(0.7vw + 1vh + 1vmin);
   background: none;
   border: 2px solid #C0BCB4;
   -webkit-transition: 0.3s;
@@ -1041,11 +1041,17 @@ footer .social .social-links a:hover {
   .article-content .description-content .price p {
     margin-inline: 20px;
   }
+  .modal .modal-size {
+    width: 70vw;
+  }
 }
 
 @media only screen and (max-width: 657px) {
   .title-content {
     text-align: center;
+  }
+  .modal .modal-size {
+    width: 99vw;
   }
 }
 
@@ -1066,6 +1072,13 @@ footer .social .social-links a:hover {
   }
   .shoes-content .shoes {
     width: 230px;
+  }
+  .modal .modal-size .modal-sizes-select .button-content {
+    width: 50%;
+    height: 50px;
+  }
+  .modal .modal-size .modal-sizes-select .button-content button {
+    padding: 15px 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
