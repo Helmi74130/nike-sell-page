@@ -663,7 +663,7 @@ footer{
     input{
       padding: 20px;
       border-radius: 15px;
-      font-size: 1.5em;
+      font-size: calc(0.5vw + 1vh + 1vmin);
     }
     button{
       margin-top: 5px;
@@ -671,7 +671,7 @@ footer{
       padding: 15px;
       border-radius: 10px;
       background: white;
-      font-size: 1.5em;
+      font-size: calc(0.5vw + 1vh + 1vmin);
       &:hover{
         cursor: pointer;
         background: $lightbrown;
@@ -691,11 +691,26 @@ footer{
       p{
         text-align: center;
         margin-bottom: 20px;
+        font-size: calc(1.2vw + 1vh + 1vmin);
       }
       a{
         margin-top: 10px;
         color: white;
         font-size: calc(0.5vw + 1vh + 1vmin);
+        &:hover{
+          color: chocolate;
+        }
+      }
+    }
+  }
+  .social{
+    padding: 20px;
+    display: flex;
+    font-size: calc(0.5vw + 1vh + 1vmin);
+    .social-links{
+      a{
+        color: white;
+        margin-left: 10px;
         &:hover{
           color: chocolate;
         }

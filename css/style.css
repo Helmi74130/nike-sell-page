@@ -873,7 +873,7 @@ footer .newsletter {
 footer .newsletter input {
   padding: 20px;
   border-radius: 15px;
-  font-size: 1.5em;
+  font-size: calc(0.5vw + 1vh + 1vmin);
 }
 
 footer .newsletter button {
@@ -882,7 +882,7 @@ footer .newsletter button {
   padding: 15px;
   border-radius: 10px;
   background: white;
-  font-size: 1.5em;
+  font-size: calc(0.5vw + 1vh + 1vmin);
 }
 
 footer .newsletter button:hover {
@@ -917,6 +917,7 @@ footer .nav .nav-section {
 footer .nav .nav-section p {
   text-align: center;
   margin-bottom: 20px;
+  font-size: calc(1.2vw + 1vh + 1vmin);
 }
 
 footer .nav .nav-section a {
@@ -926,6 +927,23 @@ footer .nav .nav-section a {
 }
 
 footer .nav .nav-section a:hover {
+  color: chocolate;
+}
+
+footer .social {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: calc(0.5vw + 1vh + 1vmin);
+}
+
+footer .social .social-links a {
+  color: white;
+  margin-left: 10px;
+}
+
+footer .social .social-links a:hover {
   color: chocolate;
 }
 /*# sourceMappingURL=style.css.map */
