@@ -112,10 +112,32 @@ header nav {
 
 header nav a {
   color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1.3em;
+  position: relative;
 }
 
-header nav a:hover {
-  color: #F8B9B8;
+header nav a:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #000000;
+  -webkit-transition: all .1s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+header nav a:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 header .right-header-nav {
@@ -165,6 +187,7 @@ header .right-header-nav .search input:focus {
 
 header .responsive-button {
   color: white;
+  margin: 5px 10px 0 0;
   background: #000;
   padding: 10px;
   border-radius: 4px;
@@ -760,6 +783,84 @@ header .responsive-button:hover {
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
+.scale-in-ver-top {
+  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.scale-out-ver-top {
+  -webkit-animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes slide-out-right {
   0% {
     -webkit-transform: translateX(0);
@@ -1002,22 +1103,26 @@ footer .social .social-links a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: calc(2vw + 1vh + 1vmin);
+    padding-bottom: 25px;
   }
   .header-nav a {
     margin-top: 10px;
+  }
+  header .left-header-nav img {
+    height: 30px;
   }
   header .right-header-nav .search {
     display: none;
   }
   header .right-header-nav a {
     position: absolute;
-    right: 90px;
-    top: 27px;
+    left: 90px;
+    top: 18px;
   }
   header .right-header-nav .header-basket {
     position: absolute;
-    right: 190px;
-    top: 33px;
+    right: 53px;
+    top: 20px;
   }
   .article-content {
     -webkit-box-orient: vertical;
@@ -1066,9 +1171,18 @@ footer .social .social-links a:hover {
   .modal .modal-size {
     width: 70vw;
   }
+  footer .newsletter input {
+    padding: 10px;
+  }
+  footer .newsletter button {
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 657px) {
+  header .right-header-nav a {
+    padding: 5px;
+  }
   .title-content {
     text-align: center;
   }
@@ -1077,6 +1191,18 @@ footer .social .social-links a:hover {
   }
   .qty {
     font-size: calc(2.5vw + 1vh + 1vmin);
+  }
+  footer .information p {
+    margin-left: 20px;
+  }
+  footer .newsletter {
+    margin-left: 30px;
+  }
+  footer .newsletter input {
+    padding: 9px;
+  }
+  footer .newsletter button {
+    padding: 5px;
   }
 }
 
@@ -1107,6 +1233,7 @@ footer .social .social-links a:hover {
     width: 100%;
   }
   .images-description .description {
+    position: relative;
     width: 100%;
     text-align: center;
   }

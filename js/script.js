@@ -9,7 +9,68 @@ let descriptionContent = document.querySelector('.description');
 let footer = document.querySelector('#footer');
 let images = document.querySelector('.images');
 let lastImg = document.querySelector('#lastImg');
+let btnHeader = document.querySelector('.responsive-button');
+let headerNav = document.querySelector('.header-nav');
 
+window.addEventListener('resize', function(e){
+  let screenSizes = e.target.innerWidth
+
+  if(screenSizes <= 1250){
+    headerNav.classList.add("none")
+    btnHeader.classList.remove("none")
+  }else{
+    btnHeader.classList.add("none")
+    headerNav.classList.remove("none")
+    headerNav.classList.remove("scale-out-ver-top")
+  }
+
+  if(screenSizes <= 542){
+    
+    descriptionContent.classList.remove('top')
+    descriptionContent.classList.remove('fixed')
+    descriptionContent.classList.add('absolute')
+  }else{
+
+    toggleFixedClass()
+  
+    const observerLastImg = new IntersectionObserver((entries)=>{
+      if(entries[0].isIntersecting ){
+        descriptionContent.classList.remove('top')
+        descriptionContent.classList.remove('fixed')
+        descriptionContent.classList.add('absolute')
+      }
+    }, {threshold: 0.99});
+    
+    observerLastImg.observe(lastImg)
+    
+    window.addEventListener('scroll', ()=>{
+      if (descriptionContent.getBoundingClientRect().y > 200 && descriptionContent.classList.contains('absolute')) {
+        descriptionContent.classList.add('fixed')
+        descriptionContent.classList.remove('absolute')
+        descriptionContent.classList.add('top')
+      }
+    })
+  }
+});
+
+if (window.matchMedia("(max-width: 1250px)").matches) {
+  headerNav.classList.add("none")
+}
+
+btnHeader.addEventListener('click', ()=>{
+  toggleNavHeader()
+})
+
+function toggleNavHeader(){
+  if(headerNav.classList.contains('scale-in-ver-top')){
+    headerNav.classList.add("scale-out-ver-top")
+    headerNav.classList.remove("scale-in-ver-top")
+  }else{
+    headerNav.classList.remove("none")
+    headerNav.classList.add("scale-in-ver-top")
+    headerNav.classList.remove("scale-out-ver-top")
+  }
+}
 
 let count = 0;
 qtyNumber.textContent = count
@@ -46,34 +107,12 @@ function shoesParallax(e) {
   bgShoes.style.transform = `rotate(${y}deg)`
 }
 
-
-
-if (window.matchMedia("(min-width: 542px)").matches) {
+function toggleFixedClass(){
   window.addEventListener('scroll', ()=>{
     if (images.getBoundingClientRect().y < 0 && images.getBoundingClientRect().y < 100) {
       descriptionContent.classList.add('fixed')
     }else if (images.getBoundingClientRect().y > 0 && images.getBoundingClientRect().y > 100){
       descriptionContent.classList.remove('fixed')
-    }
-  })
-  
-  
-  const observerLastImg = new IntersectionObserver((entries)=>{
-    if(entries[0].isIntersecting ){
-      descriptionContent.classList.remove('top')
-      descriptionContent.classList.remove('fixed')
-      descriptionContent.classList.add('absolute')
-    }
-  }, {threshold: 0.99});
-  
-  observerLastImg.observe(lastImg)
-  
-  
-  window.addEventListener('scroll', ()=>{
-    if (descriptionContent.getBoundingClientRect().y > 200 && descriptionContent.classList.contains('absolute')) {
-      descriptionContent.classList.add('fixed')
-      descriptionContent.classList.remove('absolute')
-      descriptionContent.classList.add('top')
     }
   })
 }
