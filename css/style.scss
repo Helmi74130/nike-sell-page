@@ -33,13 +33,13 @@ body{
   background: black;
   color: white;
   text-align: center;
+  font-size: calc(0.1vw + 1vh + 1vmin);
 }
 
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //padding-inline: 20px;
   .left-header-nav{
     flex: 1;
     display: flex;
@@ -87,7 +87,6 @@ header{
       color: black;
       border: 1px solid black;
       padding: 10px;
-      //background: $lightGreen ;
     }
     .search{
       position: relative;
@@ -152,7 +151,6 @@ header{
     top: 15%;
     left: 19%;
     max-height: 400px;
-    //background: #000;
     border-radius: 50%;
     transform: rotate(0deg);
   }
@@ -234,7 +232,7 @@ header{
   display: flex;
   align-items: center;
   margin-top: 20px;
-  font-size: 1.9em;
+  font-size: 2em;
   .add-qty{
     margin-left: 10px;
     display: flex;
@@ -383,6 +381,12 @@ header{
 .modal-comments{
   width: 100%;
   height: 100%;
+  .modal-comments-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .img-logo{
     text-align: center;
     img{
@@ -473,11 +477,11 @@ header{
     right: 0;
   }
   .description{
-    //top: 0;
     right: 0;
     width: 45%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'argon_demoregular';
     line-height: 1.5em;
     font-size: calc(0.5vw + 1vh + 1vmin);
@@ -788,9 +792,13 @@ footer{
       }
       .price{
         display: flex;
+        font-size: calc(3vw + 1vh + 1vmin);
         p{
           margin-inline: 20px;
         }
+      }
+      .sizes{
+        width: 70%;
       }
     }
   }
@@ -800,11 +808,15 @@ footer{
 }
 
 @media only screen and (max-width: 657px) {
-   .title-content{
-    text-align: center;
-   }
-   .modal .modal-size {
+  .title-content{
+  text-align: center;
+  }
+
+  .modal .modal-size {
     width: 99vw;
+  }
+  .qty{
+    font-size: calc(2.5vw + 1vh + 1vmin);
   }
 }
 
@@ -819,6 +831,32 @@ footer{
     }
   } 
 }
+
+@media only screen and (max-width: 540px) {
+  .images-description{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .images{
+      width: 100%;
+    }
+    .description{
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .modal-comments{
+    .modal-comments-content{
+      margin-left: 5px;
+    text-align: center;
+    }
+  }
+  .modal-shipment{
+
+  }
+  
+}
+
 
 @media only screen and (max-width: 450px) {
   .shoes-content{
@@ -837,5 +875,5 @@ footer{
       padding: 15px 30px;
     }
   }
-  
 }
+

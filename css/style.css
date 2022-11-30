@@ -33,6 +33,7 @@ body {
   background: black;
   color: white;
   text-align: center;
+  font-size: calc(0.1vw + 1vh + 1vmin);
 }
 
 header {
@@ -331,7 +332,7 @@ header .responsive-button:hover {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
-  font-size: 1.9em;
+  font-size: 2em;
 }
 
 .qty .add-qty {
@@ -529,6 +530,20 @@ header .responsive-button:hover {
   height: 100%;
 }
 
+.modal-comments .modal-comments-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .modal-comments .img-logo {
   text-align: center;
 }
@@ -666,6 +681,9 @@ header .responsive-button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'argon_demoregular';
   line-height: 1.5em;
   font-size: calc(0.5vw + 1vh + 1vmin);
@@ -1037,9 +1055,13 @@ footer .social .social-links a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: calc(3vw + 1vh + 1vmin);
   }
   .article-content .description-content .price p {
     margin-inline: 20px;
+  }
+  .article-content .description-content .sizes {
+    width: 70%;
   }
   .modal .modal-size {
     width: 70vw;
@@ -1053,6 +1075,9 @@ footer .social .social-links a:hover {
   .modal .modal-size {
     width: 99vw;
   }
+  .qty {
+    font-size: calc(2.5vw + 1vh + 1vmin);
+  }
 }
 
 @media only screen and (max-width: 580px) {
@@ -1062,6 +1087,32 @@ footer .social .social-links a:hover {
   }
   .shoes-content .shoes {
     width: 330px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .images-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .images-description .images {
+    width: 100%;
+  }
+  .images-description .description {
+    width: 100%;
+    text-align: center;
+  }
+  .modal-comments .modal-comments-content {
+    margin-left: 5px;
+    text-align: center;
   }
 }
 
