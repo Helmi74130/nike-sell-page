@@ -1105,8 +1105,8 @@ footer .social .social-links a:hover {
     font-size: calc(2vw + 1vh + 1vmin);
     padding-bottom: 25px;
   }
-  .header-nav a {
-    margin-top: 10px;
+  .header-nav .content-link {
+    margin-top: 15px;
   }
   header .left-header-nav img {
     height: 30px;

@@ -854,8 +854,8 @@ footer{
     flex-direction: column;
     font-size: calc(2vw + 1vh + 1vmin);
     padding-bottom: 25px;
-    a{
-      margin-top: 10px;
+    .content-link{
+      margin-top: 15px;
     }
   }  
   header{
