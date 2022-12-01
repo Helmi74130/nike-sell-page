@@ -14,6 +14,7 @@ let headerNav = document.querySelector('.header-nav');
 let shoesChoices = document.querySelectorAll('.shoes-color');
 let imgDescriptions = document.querySelectorAll('.img-presentation');
 let modalOtherProduct = document.querySelector('.modal-other-product');
+let closeModalBasket = document.querySelectorAll('.close-modal-basket');
 
 /* 
  * Allows to increment a counter and to decrement when clicking on a button
@@ -36,9 +37,19 @@ btnLessQty.addEventListener('click', () => {
 })
 addBasketButton.addEventListener('click', () => {
     qtyHeaderBasket.textContent = count
-    console.log(modalOtherProduct);
     modalOtherProduct.classList.remove("none")
+    modalOtherProduct.classList.remove("slide-out-br")
+    modalOtherProduct.classList.add("slide-in-blurred-bl")
+
 })
+
+for (const close of closeModalBasket) {
+    close.addEventListener('click', ()=>{
+        //modalOtherProduct.classList.add("none")
+        modalOtherProduct.classList.add("slide-out-br")
+        modalOtherProduct.classList.remove("slide-in-blurred-bl")
+    })
+}
 
 /* 
  * This function allows to give an effect to the image as well as to the BG according to the position of the mouse
