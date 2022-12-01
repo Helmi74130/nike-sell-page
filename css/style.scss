@@ -3,15 +3,6 @@ $lightGreen: #c5e8e3;
 $lightPink: #f8b9b8;
 $bgcolor: #f8f8f4;
 
-//HEADER START
-/* .header-top {
-  width: 100%;
-  background: rgb(34, 34, 34);
-  color: white;
-  text-align: center;
-  font-size: calc(0.1vw + 1vh + 1vmin);
-  border-bottom: 1px solid;
-} */
 
 header {
   display: flex;
@@ -129,6 +120,89 @@ header {
     }
   }
 }
+
+//MODAL OTHER PRODUCTS
+
+.modal-other-product{
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.452);
+  height: 1000%;
+  width: 100%;
+  text-align: center;
+  .content-other-product{
+    position: fixed;
+    padding: 30px;
+    background: $bgcolor;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    .header-other-product{
+      display: flex;
+      justify-content: space-between;
+    }
+    .title{
+      font-size: 2em;
+      margin-bottom: 25px;
+    }
+    .close-modal{
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: #c0bcb4;
+      &:hover{
+        cursor: pointer;
+        color: #000;
+      }
+    }
+    button{
+      background: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      padding: 10px;
+      transition: 0.3s;
+      &:hover{
+        cursor: pointer;
+        background-color: rgb(131, 128, 128);
+        color: white;
+      }
+      &:first-child{
+        background: #000;
+        color: white;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        &:hover{
+          background: $lightGreen;
+          color: #000;
+        }
+      }
+    }
+  }
+  .other-product{
+    display: flex;
+    p{
+      margin-top: 15px;
+      font-size: 1.3em;
+    }
+  }
+  .purchase-order{
+    display: flex;
+    justify-content: space-around;
+  }
+  img{
+    box-shadow: 5px 8px 23px -6px rgba(0,0,0,0.36);
+    width: 200px;
+    height: 300px;
+    margin: 0 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
 //SHOES PRINCIPAL
 .article-content {
   display: flex;
@@ -150,7 +224,7 @@ header {
     height: 550px;
     width: 550px;
     border-radius: 50%;
-    background: linear-gradient(#ffaadd, $lightGreen);//////
+    background: linear-gradient(#ffaadd, $lightGreen);
     border: 4px solid black;
     transition: 1.5s;
   }
@@ -193,9 +267,11 @@ header {
       background-size: cover;
       background-position: center;
       transition: all 0.5s;
+      
       &:hover {
         cursor: pointer;
         transform: scale(1.7);
+        box-shadow: -3px -1px 18px 2px rgba(0,0,0,0.36);
       }
       
     }
@@ -292,6 +368,7 @@ header {
       cursor: pointer;
       background: black;
       color: white;
+      box-shadow: -3px -1px 18px 2px rgba(0,0,0,0.36);
     }
   }
 }
@@ -492,8 +569,6 @@ header {
       max-width: 100%;
       width: 100%;
       min-width: 100%;
-      //max-height: 550px;
-      //min-height: 550px;
     }
   }
   .shoes-description-content {

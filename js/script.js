@@ -13,6 +13,7 @@ let btnHeader = document.querySelector('.responsive-button');
 let headerNav = document.querySelector('.header-nav');
 let shoesChoices = document.querySelectorAll('.shoes-color');
 let imgDescriptions = document.querySelectorAll('.img-presentation');
+let modalOtherProduct = document.querySelector('.modal-other-product');
 
 /* 
  * Allows to increment a counter and to decrement when clicking on a button
@@ -35,6 +36,8 @@ btnLessQty.addEventListener('click', () => {
 })
 addBasketButton.addEventListener('click', () => {
     qtyHeaderBasket.textContent = count
+    console.log(modalOtherProduct);
+    modalOtherProduct.classList.remove("none")
 })
 
 /* 

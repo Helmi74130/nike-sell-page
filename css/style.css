@@ -1,11 +1,3 @@
-/* .header-top {
-  width: 100%;
-  background: rgb(34, 34, 34);
-  color: white;
-  text-align: center;
-  font-size: calc(0.1vw + 1vh + 1vmin);
-  border-bottom: 1px solid;
-} */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +171,116 @@ header .responsive-button:hover {
   background: none;
 }
 
+.modal-other-product {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.452);
+  height: 1000%;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-other-product .content-other-product {
+  position: fixed;
+  padding: 30px;
+  background: #f8f8f4;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-other-product .content-other-product .header-other-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-other-product .content-other-product .title {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.modal-other-product .content-other-product .close-modal {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #c0bcb4;
+}
+
+.modal-other-product .content-other-product .close-modal:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-other-product .content-other-product button {
+  background: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal-other-product .content-other-product button:hover {
+  cursor: pointer;
+  background-color: #838080;
+  color: white;
+}
+
+.modal-other-product .content-other-product button:first-child {
+  background: #000;
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-other-product .content-other-product button:first-child:hover {
+  background: #c5e8e3;
+  color: #000;
+}
+
+.modal-other-product .other-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-other-product .other-product p {
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+.modal-other-product .purchase-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-other-product img {
+  -webkit-box-shadow: 5px 8px 23px -6px rgba(0, 0, 0, 0.36);
+          box-shadow: 5px 8px 23px -6px rgba(0, 0, 0, 0.36);
+  width: 200px;
+  height: 300px;
+  margin: 0 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.modal-other-product img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .article-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +372,8 @@ header .responsive-button:hover {
   cursor: pointer;
   -webkit-transform: scale(1.7);
           transform: scale(1.7);
+  -webkit-box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
+          box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
 }
 
 .description-content .choice-color-shoes .bg-1 {
@@ -401,6 +505,8 @@ header .responsive-button:hover {
   cursor: pointer;
   background: black;
   color: white;
+  -webkit-box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
+          box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
 }
 
 .none {
