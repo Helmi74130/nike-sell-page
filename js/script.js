@@ -11,6 +11,8 @@ let images = document.querySelector('.images');
 let lastImg = document.querySelector('#lastImg');
 let btnHeader = document.querySelector('.responsive-button');
 let headerNav = document.querySelector('.header-nav');
+let shoesChoices = document.querySelectorAll('.shoes-color');
+let imgDescriptions = document.querySelectorAll('.img-presentation');
 
 /* 
  * Allows to increment a counter and to decrement when clicking on a button
@@ -148,3 +150,59 @@ function observeScroll() {
         }
     })
 }
+
+//Start
+
+for (let i = 0; i < shoesChoices.length; i++) {
+    const element = shoesChoices[i];
+    
+    element.addEventListener('click', (e)=>{
+        if (e.target.dataset.value !== shoes.getAttribute('src')) {
+            shoes.classList.add('roll-out-bottom')
+            shoes.classList.remove('roll-in-top')
+            changeImgSrc(e)
+            setTimeout(() => {
+                shoes.classList.add('roll-in-top')
+                shoes.src = e.target.dataset.value
+                shoes.classList.remove('roll-out-bottom')
+                bgShoes.style.background = e.target.dataset.bg
+            }, 600)
+        }  
+    })
+}
+
+
+const shoesOliveSrc = ["/img/nikeoilve.jpeg", "/img/nikeoliveback.jpg", "/img/nikeolivetop.jpg", "/img/nikeolivebottom.jpg"];
+const shoesBrownSrc = ["/img/nikebrun.jpg", "/img/nikebruntwo.jpg", "/img/nikebruntop.jpg", "/img/nikebrunbottom.jpg"];
+const shoesGreySrc = ["/img/nikegrey.png", "/img/nikegreyback.png", "/img/nikegreytop.png", "/img/nikegreybottom.png"];
+const shoesPastelSrc = [ "/img/preview4.jpeg","/img/preview1.jpeg", "/img/preview3.jpeg", "/img/preview2.jpeg",];
+
+function changeImgSrc(e){
+    switch (e.target.dataset.picture) {
+        case '1':
+            for (let i = 0; i < 4; i++) { 
+                imgDescriptions[i].src =  shoesGreySrc[i]
+             }
+          break;
+        case '2':
+            for (let i = 0; i < 4; i++) { 
+                imgDescriptions[i].src =  shoesOliveSrc[i]
+             }
+          break;
+        case '3':
+            for (let i = 0; i < 4; i++) { 
+                imgDescriptions[i].src =  shoesBrownSrc[i]
+             }
+          break;
+        case '4':
+            for (let i = 0; i < 4; i++) { 
+                imgDescriptions[i].src =  shoesPastelSrc[i]
+             }
+        default:
+    }
+}
+
+
+
+
+
