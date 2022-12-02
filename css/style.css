@@ -14,7 +14,7 @@ header {
   position: sticky;
   top: 0px;
   z-index: 10;
-  padding: 10px;
+  padding: 10px 0 10px 0;
 }
 
 header .left-header-nav {
@@ -66,6 +66,10 @@ header .header-basket .qty-basket {
   font-size: 1.3em;
   border: 1px solid white;
   border-radius: 50%;
+}
+
+header .header-basket:hover {
+  cursor: pointer;
 }
 
 header nav {
@@ -124,6 +128,13 @@ header .right-header-nav a {
   color: white;
   border: 1px solid white;
   padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .right-header-nav a:hover {
+  color: #000;
+  background: white;
 }
 
 header .right-header-nav .search {
@@ -156,9 +167,9 @@ header .right-header-nav .search input:focus {
 }
 
 header .responsive-button {
-  color: white;
+  color: black;
   margin: 5px 10px 0 0;
-  background: #000;
+  background: white;
   padding: 10px;
   border-radius: 4px;
   -webkit-transition: 0.3s;
@@ -167,8 +178,9 @@ header .responsive-button {
 
 header .responsive-button:hover {
   cursor: pointer;
-  color: #000;
+  color: white;
   background: none;
+  border: 1px solid white;
 }
 
 .modal-other-product {
@@ -1331,16 +1343,16 @@ footer .social .social-links a:hover {
   .header-nav {
     z-index: 10;
     position: absolute;
-    top: 80px;
+    top: 60px;
     width: 100%;
     text-align: center;
-    background: #f8f8f4;
+    background: #222222;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: calc(2vw + 1vh + 1vmin);
-    padding-bottom: 25px;
+    padding: 25px 0 20px 0;
   }
   .header-nav .content-link {
     margin-top: 15px;
@@ -1358,7 +1370,7 @@ footer .social .social-links a:hover {
   }
   header .right-header-nav .header-basket {
     position: absolute;
-    right: 53px;
+    right: 60px;
     top: 20px;
   }
   .article-content {
@@ -1507,7 +1519,7 @@ html {
 }
 
 .top {
-  top: 0;
+  top: 50px;
 }
 
 body {
