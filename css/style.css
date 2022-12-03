@@ -1,3 +1,30 @@
+.modal-img-fullscreen {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.644);
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+
+.modal-img-fullscreen:hover {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.modal-img-fullscreen img {
+  width: 50%;
+  max-height: 95%;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,6 +818,8 @@ header .responsive-button:hover {
   max-width: 100%;
   width: 100%;
   min-width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .images-description .shoes-description-content {
@@ -1068,6 +1097,9 @@ footer .social .social-links a:hover {
   footer .newsletter button {
     padding: 10px;
   }
+  .modal-img-fullscreen img {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 657px) {
@@ -1094,6 +1126,9 @@ footer .social .social-links a:hover {
   }
   footer .newsletter button {
     padding: 5px;
+  }
+  .modal-img-fullscreen img {
+    width: 95%;
   }
 }
 
@@ -1179,8 +1214,8 @@ body {
 }
 
 .swing-out-top-bck {
-  -webkit-animation: swing-out-top-bck 0.45s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
-          animation: swing-out-top-bck 0.45s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+  -webkit-animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+          animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
 }
 
 .swing-in-top-fwd {

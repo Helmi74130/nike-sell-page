@@ -3,6 +3,24 @@ $lightGreen: #c5e8e3;
 $lightPink: #f8b9b8;
 $bgcolor: #f8f8f4;
 
+.modal-img-fullscreen{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.644);
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+  &:hover{
+    cursor: zoom-out;
+  }
+  img{
+    width: 50%;
+    max-height: 95%;
+  }
+}
+
 
 header {
   display: flex;
@@ -578,6 +596,7 @@ header {
       max-width: 100%;
       width: 100%;
       min-width: 100%;
+      cursor: zoom-in;
     }
   }
   .shoes-description-content {
@@ -796,6 +815,9 @@ footer {
       padding: 10px;
     }
   }
+  .modal-img-fullscreen img{
+    width: 80%;
+  }
 }
 
 //MEDIAS QUERIES 657PX
@@ -826,6 +848,9 @@ footer {
         padding: 5px;
       }
     }
+  }
+  .modal-img-fullscreen img{
+    width: 95%;
   }
 }
 
@@ -912,7 +937,7 @@ body {
 }
 
 .swing-out-top-bck {
-  animation: swing-out-top-bck 0.45s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+  animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
 }
 
 .swing-in-top-fwd {

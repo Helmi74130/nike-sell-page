@@ -13,33 +13,32 @@ sizes.addEventListener('click', () => {
     modal.classList.remove("none");
     modalSize.classList.add("slide-in-right");
     modalSize.classList.remove("slide-out-right");
-})
+});
 
 buttonCloseModalSize.addEventListener('click', () => {
-    closeSizeModal()
-})
+    closeSizeModal();
+});
 
 modalSizeSelect.forEach(function(button) {
     button.addEventListener('click', (event) => {
-        let userSizeSelect = event.target.textContent
-        textSizeUserSelect.textContent = userSizeSelect
-        closeSizeModal()
+        let userSizeSelect = event.target.textContent;
+        textSizeUserSelect.textContent = userSizeSelect;
+        closeSizeModal();
     });
 });
-
 
 function closeSizeModal() {
     modalSize.classList.remove("slide-in-right");
     modalSize.classList.add("slide-out-right");
     setTimeout(() => {
         modal.classList.add("none");
-    }, "600")
-}
+    }, "600");
+};
 
 function outsideClick(e) {
     if (e.target === modal) {
-        closeSizeModal()
-    }
-}
+        closeSizeModal();
+    };
+};
 
 window.addEventListener('click', outsideClick);
