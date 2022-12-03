@@ -11,8 +11,8 @@ let body = document.querySelector('body');
  */
 sizes.addEventListener('click', () => {
     modal.classList.remove("none");
-    modalSize.classList.add("right-slide");
-    modalSize.classList.remove("right-slide-out");
+    modalSize.classList.add("right-entrance");
+    modalSize.classList.remove("right-exit");
 });
 
 buttonCloseModalSize.addEventListener('click', () => {
@@ -29,7 +29,7 @@ modalSizeSelect.forEach(function(button) {
 
 function closeSizeModal() {
     modalSize.classList.remove("right-slide");
-    modalSize.classList.add("right-slide-out");
+    modalSize.classList.add("right-exit");
     setTimeout(() => {
         modal.classList.add("none");
     }, "600");

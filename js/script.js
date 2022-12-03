@@ -57,8 +57,8 @@ btnLessQty.addEventListener('click', () => {
 addBasketButton.addEventListener('click', () => {
     qtyHeaderBasket.textContent = count;
     modalOtherProduct.classList.remove("none");
-    modalOtherProduct.classList.remove("slide-out-br");
-    modalOtherProduct.classList.add("slide-in-blurred-bl");
+    modalOtherProduct.classList.remove("slide-exit");
+    modalOtherProduct.classList.add("slide-entrance");
     if (count >= 1) {
         qtyBasket.style.background = "orange";
     } else {
@@ -69,8 +69,8 @@ addBasketButton.addEventListener('click', () => {
 
 for (const close of closeModalBasket) {
     close.addEventListener('click', () => {
-        modalOtherProduct.classList.add("slide-out-br");
-        modalOtherProduct.classList.remove("slide-in-blurred-bl");
+        modalOtherProduct.classList.add("slide-exit");
+        modalOtherProduct.classList.remove("slide-entrance");
     });
 };
 
@@ -97,13 +97,13 @@ for (let i = 0; i < shoesChoices.length; i++) {
 
     element.addEventListener('click', (e) => {
         if (e.target.dataset.value !== shoes.getAttribute('src')) {
-            shoes.classList.add('roll-out-bottom');
-            shoes.classList.remove('roll-in-top');
+            shoes.classList.add('roll-entrance');
+            shoes.classList.remove('roll-exit');
             changeImgSrc(e);
             setTimeout(() => {
-                shoes.classList.add('roll-in-top');
+                shoes.classList.add('roll-exit');
                 shoes.src = e.target.dataset.value;
-                shoes.classList.remove('roll-out-bottom');
+                shoes.classList.remove('roll-entrance');
                 bgShoes.style.background = e.target.dataset.bg;
             }, 600);
         };
@@ -156,7 +156,7 @@ window.addEventListener('resize', function(e) {
     } else {
         btnHeader.classList.add("none");
         headerNav.classList.remove("none");
-        headerNav.classList.remove("scale-out-ver-top");
+        headerNav.classList.remove("scale-exit");
     };
 
     if (screenSizes <= 542) {
@@ -179,13 +179,13 @@ if (window.matchMedia("(max-width: 1250px)").matches) {
  * This function toggle the navbar in responsive mode
  */
 function toggleNavHeader() {
-    if (headerNav.classList.contains('scale-in-ver-top')) {
-        headerNav.classList.add("scale-out-ver-top");
-        headerNav.classList.remove("scale-in-ver-top");
+    if (headerNav.classList.contains('scale-entrance')) {
+        headerNav.classList.add("scale-exit");
+        headerNav.classList.remove("scale-entrance");
     } else {
         headerNav.classList.remove("none");
-        headerNav.classList.add("scale-in-ver-top");
-        headerNav.classList.remove("scale-out-ver-top");
+        headerNav.classList.add("scale-entrance");
+        headerNav.classList.remove("scale-exit");
     };
 };
 btnHeader.addEventListener('click', () => {

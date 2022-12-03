@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'starife_demoregular';
+  src: url("/fonts/starifedemo-webfont.woff2") format("woff2"), url("/fonts/starifedemo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mortal_waveregular';
+  src: url("/fonts/mortal_wave-webfont.woff2") format("woff2"), url("/fonts/mortal_wave-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'argon_demoregular';
+  src: url("/fonts/argon-demo-webfont.woff2") format("woff2"), url("/fonts/argon-demo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .modal-img-fullscreen {
   position: fixed;
   display: -webkit-box;
@@ -395,7 +416,7 @@ header .responsive-button:hover {
 
 .description-content .title-content h1 sup {
   font-size: calc(1vw + 1vh + 1vmin);
-  color: #c0bcb4;
+  color: #585757;
 }
 
 .description-content .title-content p {
@@ -613,15 +634,15 @@ header .responsive-button:hover {
 .modal {
   font-family: "starife_demoregular";
   letter-spacing: 0.2em;
-  height: 1000%;
+  height: 100%;
   width: 100vw;
   background: rgba(0, 0, 0, 0.534);
-  position: absolute;
+  position: fixed;
+  z-index: 10;
 }
 
 .modal .modal-size {
   position: fixed;
-  z-index: 10;
   right: 0;
   top: 200px;
   width: 35vw;
@@ -1251,57 +1272,57 @@ body {
   background: #f8f8f4;
 }
 
-.right-slide {
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.right-entrance {
+  -webkit-animation: right-entrance 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: right-entrance 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.right-slide-out {
-  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-          animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.right-exit {
+  -webkit-animation: right-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: right-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.rotate-out {
-  -webkit-animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
-          animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+.rotate-exit {
+  -webkit-animation: rotate-exit 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+          animation: rotate-exit 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
 }
 
-.swing-in-top-fwd {
-  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-          animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+.swing-entrance {
+  -webkit-animation: swing-entrance 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+          animation: swing-entrance 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
-.scale-in-ver-top {
-  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.scale-entrance {
+  -webkit-animation: scale-entrance 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: scale-entrance 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.scale-out-ver-top {
-  -webkit-animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-          animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.scale-exit {
+  -webkit-animation: scale-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: scale-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.roll-out-bottom {
-  -webkit-animation: roll-out-bottom 0.6s ease-in both;
-          animation: roll-out-bottom 0.6s ease-in both;
+.roll-entrance {
+  -webkit-animation: roll-entrance 0.6s ease-in both;
+          animation: roll-entrance 0.6s ease-in both;
 }
 
-.roll-in-top {
-  -webkit-animation: roll-in-top 0.6s ease-out both;
-          animation: roll-in-top 0.6s ease-out both;
+.roll-exit {
+  -webkit-animation: roll-exit 0.6s ease-out both;
+          animation: roll-exit 0.6s ease-out both;
 }
 
-.slide-in-blurred-bl {
-  -webkit-animation: slide-in-blurred-bl 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
-          animation: slide-in-blurred-bl 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+.slide-entrance {
+  -webkit-animation: slide-entrance 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+          animation: slide-entrance 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
-.slide-out-br {
-  -webkit-animation: slide-out-br 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-          animation: slide-out-br 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.slide-exit {
+  -webkit-animation: slide-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: slide-exit 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-@-webkit-keyframes slide-out-br {
+@-webkit-keyframes slide-exit {
   0% {
     -webkit-transform: translateY(0) translateX(0);
             transform: translateY(0) translateX(0);
@@ -1314,7 +1335,7 @@ body {
   }
 }
 
-@keyframes slide-out-br {
+@keyframes slide-exit {
   0% {
     -webkit-transform: translateY(0) translateX(0);
             transform: translateY(0) translateX(0);
@@ -1327,7 +1348,7 @@ body {
   }
 }
 
-@-webkit-keyframes slide-in-blurred-bl {
+@-webkit-keyframes slide-entrance {
   0% {
     -webkit-transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
             transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
@@ -1348,7 +1369,7 @@ body {
   }
 }
 
-@keyframes slide-in-blurred-bl {
+@keyframes slide-entrance {
   0% {
     -webkit-transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
             transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
@@ -1369,7 +1390,7 @@ body {
   }
 }
 
-@-webkit-keyframes roll-in-top {
+@-webkit-keyframes roll-exit {
   0% {
     -webkit-transform: translateY(-800px) rotate(-540deg);
             transform: translateY(-800px) rotate(-540deg);
@@ -1382,7 +1403,7 @@ body {
   }
 }
 
-@keyframes roll-in-top {
+@keyframes roll-exit {
   0% {
     -webkit-transform: translateY(-800px) rotate(-540deg);
             transform: translateY(-800px) rotate(-540deg);
@@ -1395,7 +1416,7 @@ body {
   }
 }
 
-@-webkit-keyframes roll-out-bottom {
+@-webkit-keyframes roll-entrance {
   0% {
     -webkit-transform: translateY(0) rotate(0deg);
             transform: translateY(0) rotate(0deg);
@@ -1408,7 +1429,7 @@ body {
   }
 }
 
-@keyframes roll-out-bottom {
+@keyframes roll-entrance {
   0% {
     -webkit-transform: translateY(0) rotate(0deg);
             transform: translateY(0) rotate(0deg);
@@ -1421,7 +1442,7 @@ body {
   }
 }
 
-@-webkit-keyframes scale-out-ver-top {
+@-webkit-keyframes scale-exit {
   0% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
@@ -1438,7 +1459,7 @@ body {
   }
 }
 
-@keyframes scale-out-ver-top {
+@keyframes scale-exit {
   0% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
@@ -1455,7 +1476,7 @@ body {
   }
 }
 
-@-webkit-keyframes scale-in-ver-top {
+@-webkit-keyframes scale-entrance {
   0% {
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -1472,7 +1493,7 @@ body {
   }
 }
 
-@keyframes scale-in-ver-top {
+@keyframes scale-entrance {
   0% {
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -1489,7 +1510,7 @@ body {
   }
 }
 
-@-webkit-keyframes slide-out-right {
+@-webkit-keyframes right-exit {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1502,7 +1523,7 @@ body {
   }
 }
 
-@keyframes slide-out-right {
+@keyframes right-exit {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1515,7 +1536,7 @@ body {
   }
 }
 
-@-webkit-keyframes slide-in-right {
+@-webkit-keyframes right-entrance {
   0% {
     -webkit-transform: translateX(1000px);
             transform: translateX(1000px);
@@ -1528,7 +1549,7 @@ body {
   }
 }
 
-@keyframes slide-in-right {
+@keyframes right-entrance {
   0% {
     -webkit-transform: translateX(1000px);
             transform: translateX(1000px);
@@ -1541,7 +1562,7 @@ body {
   }
 }
 
-@-webkit-keyframes swing-out-top-bck {
+@-webkit-keyframes rotate-exit {
   0% {
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
@@ -1558,7 +1579,7 @@ body {
   }
 }
 
-@keyframes swing-out-top-bck {
+@keyframes rotate-exit {
   0% {
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
@@ -1575,7 +1596,7 @@ body {
   }
 }
 
-@-webkit-keyframes swing-in-top-fwd {
+@-webkit-keyframes swing-entrance {
   0% {
     -webkit-transform: rotateX(-100deg);
             transform: rotateX(-100deg);
@@ -1592,7 +1613,7 @@ body {
   }
 }
 
-@keyframes swing-in-top-fwd {
+@keyframes swing-entrance {
   0% {
     -webkit-transform: rotateX(-100deg);
             transform: rotateX(-100deg);
