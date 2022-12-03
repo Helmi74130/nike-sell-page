@@ -113,10 +113,10 @@ for (let i = 0; i < shoesChoices.length; i++) {
 /* 
  * This function allows you to switch the source images
  */
-const shoesOliveSrc = ["/img/nikeoilve.jpeg", "/img/nikeoliveback.jpg", "/img/nikeolivetop.jpg", "/img/nikeolivebottom.jpg"];
-const shoesBrownSrc = ["/img/nikebrun.jpg", "/img/nikebruntwo.jpg", "/img/nikebruntop.jpg", "/img/nikebrunbottom.jpg"];
-const shoesGreySrc = ["/img/nikegrey.png", "/img/nikegreyback.png", "/img/nikegreytop.png", "/img/nikegreybottom.png"];
-const shoesPastelSrc = ["/img/preview4.jpeg", "/img/preview1.jpeg", "/img/preview3.jpeg", "/img/preview2.jpeg", ];
+const shoesOliveSrc = ["/img/nikeoilve.webp", "/img/nikeoliveback.webp", "/img/nikeolivetop.webp", "/img/nikeolivebottom.webp"];
+const shoesBrownSrc = ["/img/nikebrun.webp", "/img/nikebruntwo.webp", "/img/nikebruntop.webp", "/img/nikebrunbottom.webp"];
+const shoesGreySrc = ["/img/nikegrey.webp", "/img/nikegreyback.webp", "/img/nikegreytop.webp", "/img/nikegreybottom.webp"];
+const shoesPastelSrc = ["/img/preview4.webp", "/img/preview1.webp", "/img/preview3.webp", "/img/preview2.webp", ];
 
 function changeImgSrc(e) {
     switch (e.target.dataset.picture) {

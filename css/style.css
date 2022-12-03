@@ -452,19 +452,19 @@ header .responsive-button:hover {
 }
 
 .description-content .choice-color-shoes .bg-1 {
-  background-image: url("/img/shoeschoice1.png");
+  background-image: url("/img/shoeschoice1.webp");
 }
 
 .description-content .choice-color-shoes .bg-2 {
-  background-image: url("/img/shoeschoice2.png");
+  background-image: url("/img/shoeschoice2.webp");
 }
 
 .description-content .choice-color-shoes .bg-3 {
-  background-image: url("/img/shoeschoice3.jpg");
+  background-image: url("/img/shoeschoice3.webp");
 }
 
 .description-content .choice-color-shoes .bg-4 {
-  background-image: url("/img/preview4.jpeg");
+  background-image: url("/img/preview4.webp");
 }
 
 .description-content .price {
