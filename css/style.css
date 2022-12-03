@@ -956,7 +956,7 @@ footer .information {
   margin-top: 10px;
 }
 
-footer .information h6 {
+footer .information h3 {
   padding-top: 50px;
   font-size: calc(8vw + 1vh + 1vmin);
   font-family: "mortal_waveregular";
