@@ -3,7 +3,7 @@ $lightGreen: #c5e8e3;
 $lightPink: #f8b9b8;
 $bgcolor: #f8f8f4;
 
-.modal-img-fullscreen{
+.modal-img-fullscreen {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -12,21 +12,20 @@ $bgcolor: #f8f8f4;
   height: 100%;
   width: 100%;
   z-index: 50;
-  &:hover{
+  &:hover {
     cursor: zoom-out;
   }
-  img{
+  img {
     width: 50%;
     max-height: 95%;
   }
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:rgb(34, 34, 34);
+  background: rgb(34, 34, 34);
   color: white;
   position: sticky;
   top: 0px;
@@ -56,10 +55,9 @@ header {
       height: 20px;
       width: 20px;
       font-size: 1.3em;
-      border: 1px solid white;
       border-radius: 50%;
     }
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -80,7 +78,7 @@ header {
         left: 0;
         bottom: 0;
         visibility: hidden;
-        background-color:white;
+        background-color: white;
         -webkit-transition: all 0.1s ease;
         transition: all 0.3s ease;
         -webkit-transform: scaleX(0);
@@ -105,7 +103,7 @@ header {
       border: 1px solid white;
       padding: 10px;
       transition: 0.3s;
-      &:hover{
+      &:hover {
         color: #000;
         background: white;
       }
@@ -118,7 +116,7 @@ header {
         position: absolute;
         top: 30%;
         left: 5%;
-        color:rgb(0, 0, 0)
+        color: rgb(0, 0, 0);
       }
       input {
         border-radius: 30px;
@@ -150,7 +148,7 @@ header {
 
 //MODAL OTHER PRODUCTS
 
-.modal-other-product{
+.modal-other-product {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -158,73 +156,84 @@ header {
   height: 100%;
   width: 100%;
   text-align: center;
-  .content-other-product{
+  .content-other-product {
+    width: 60%;
     position: absolute;
     padding: 30px;
     background: $bgcolor;
     border-radius: 10px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    .header-other-product{
+    transform: translate(-50%, -50%);
+    .other-product {
+      display: flex;
+      justify-content: space-around;
+    }
+    .header-other-product {
       display: flex;
       justify-content: space-between;
+      .close-modal-basket {
+        margin-bottom: 50px;
+        background: none;
+        color: #000;
+      }
     }
-    .title{
+    .title {
       font-size: 2em;
       margin-bottom: 25px;
     }
-    .close-modal{
+    .close-modal {
       background: none;
       border: none;
       font-size: 2em;
       color: #c0bcb4;
-      &:hover{
+      &:hover {
         cursor: pointer;
         color: #000;
       }
     }
-    button{
+    button {
       background: none;
       margin-top: 10px;
       border-radius: 5px;
       padding: 10px;
       transition: 0.3s;
-      &:hover{
+      margin-left: 10px;
+      &:hover {
         cursor: pointer;
         background-color: rgb(131, 128, 128);
         color: white;
       }
-      &:first-child{
+      &:first-child {
         background: #000;
         color: white;
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-        &:hover{
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        &:hover {
           background: $lightGreen;
           color: #000;
         }
       }
     }
   }
-  .other-product{
+  .other-product {
     display: flex;
-    p{
+    p {
       margin-top: 15px;
       font-size: 1.3em;
     }
   }
-  .purchase-order{
+  .purchase-order {
     display: flex;
     justify-content: space-around;
   }
-  img{
-    box-shadow: 5px 8px 23px -6px rgba(0,0,0,0.36);
+  img {
+    box-shadow: 5px 8px 23px -6px rgba(0, 0, 0, 0.36);
     width: 200px;
     height: 300px;
     margin: 0 10px;
     transition: 0.5s;
     border-radius: 10px;
-    &:hover{
+    &:hover {
       cursor: pointer;
       transform: scale(1.1);
     }
@@ -244,7 +253,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  .piou {
+  .principal-shoes {
     position: relative;
   }
   .shoes-bg {
@@ -294,13 +303,12 @@ header {
       background-size: cover;
       background-position: center;
       transition: all 0.5s;
-      
+
       &:hover {
         cursor: pointer;
         transform: scale(1.7);
-        box-shadow: -3px -1px 18px 2px rgba(0,0,0,0.36);
+        box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
       }
-      
     }
     .bg-1 {
       background-image: url("/img/shoeschoice1.png");
@@ -395,7 +403,7 @@ header {
       cursor: pointer;
       background: black;
       color: white;
-      box-shadow: -3px -1px 18px 2px rgba(0,0,0,0.36);
+      box-shadow: -3px -1px 18px 2px rgba(0, 0, 0, 0.36);
     }
   }
 }
@@ -563,11 +571,17 @@ header {
     font-size: 0.7em;
     background-color: $lightbrown;
     width: 80%;
-    height: 200px;
     border-radius: 10px;
     padding: 20px;
     .date {
       font-size: 0.7em;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      &:hover {
+        cursor: zoom-in;
+      }
     }
     button {
       background: black;
@@ -615,7 +629,7 @@ header {
     align-items: center;
     font-family: "argon_demoregular";
     line-height: 1.5em;
-    font-size: calc(0.5vw + 1vh + 1vmin);
+    font-size: calc(0.3vw + 1vh + 1vmin);
     h2 {
       font-family: "starife_demoregular";
       letter-spacing: 0.2em;
@@ -735,8 +749,12 @@ footer {
       }
     }
   }
+  .propulse {
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
 }
-
 
 //MEDIAS QUERIES START
 
@@ -815,8 +833,19 @@ footer {
       padding: 10px;
     }
   }
-  .modal-img-fullscreen img{
+  .modal-img-fullscreen img {
     width: 80%;
+  }
+  .modal-other-product .content-other-product {
+    width: 90%;
+  }
+}
+
+//MEDIAS QUERIES 700PX
+@media only screen and (max-width: 700px) {
+  .modal-other-product img {
+    width: 150px;
+    height: 200px;
   }
 }
 
@@ -849,7 +878,7 @@ footer {
       }
     }
   }
-  .modal-img-fullscreen img{
+  .modal-img-fullscreen img {
     width: 95%;
   }
 }
@@ -884,9 +913,14 @@ footer {
   }
   .modal-comments {
     .modal-comments-content {
-      margin-left: 5px;
+      margin-left: 15px;
       text-align: center;
+      width: 94%;
+      margin-top: 30px;
     }
+  }
+  .socket {
+    display: none;
   }
 }
 
@@ -908,6 +942,9 @@ footer {
       padding: 15px 30px;
     }
   }
+  .bonnet {
+    display: none;
+  }
 }
 
 //CLASSES UTILITIES
@@ -928,15 +965,15 @@ body {
 }
 
 //KEYFRAMES ANIMATION
-.slide-in-right {
+.right-slide {
   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.slide-out-right {
+.right-slide-out {
   animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.swing-out-top-bck {
+.rotate-out {
   animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
 }
 
@@ -953,19 +990,19 @@ body {
 }
 
 .roll-out-bottom {
-	animation: roll-out-bottom 0.6s ease-in both;
+  animation: roll-out-bottom 0.6s ease-in both;
 }
 
 .roll-in-top {
-	animation: roll-in-top 0.6s ease-out both;
+  animation: roll-in-top 0.6s ease-out both;
 }
 
 .slide-in-blurred-bl {
-	animation: slide-in-blurred-bl 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: slide-in-blurred-bl 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .slide-out-br {
-	animation: slide-out-br 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-br 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @keyframes slide-out-br {
@@ -1052,7 +1089,6 @@ body {
     opacity: 0;
   }
 }
-
 
 @keyframes slide-in-right {
   0% {

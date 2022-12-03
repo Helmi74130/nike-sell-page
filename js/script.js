@@ -18,15 +18,20 @@ let modalImgFullscreen = document.querySelector('.modal-img-fullscreen');
 let closeModalBasket = document.querySelectorAll('.close-modal-basket');
 let clickFullScreens = document.querySelectorAll('.click-fullscreen');
 let imgFullScreen = document.querySelector('#imgFullScreen');
+let qtyBasket = document.querySelector('.qty-basket');
 
+
+/* 
+ * Open Modal FullScreen Shoes
+ */
 
 for (const clickFullScreen of clickFullScreens) {
-    clickFullScreen.addEventListener('click', (e)=>{
+    clickFullScreen.addEventListener('click', (e) => {
         modalImgFullscreen.classList.remove("none")
         imgFullScreen.src = e.target.src
     })
 }
-modalImgFullscreen.addEventListener("click", ()=>{
+modalImgFullscreen.addEventListener("click", () => {
     modalImgFullscreen.classList.add("none")
 })
 
@@ -54,11 +59,16 @@ addBasketButton.addEventListener('click', () => {
     modalOtherProduct.classList.remove("none");
     modalOtherProduct.classList.remove("slide-out-br");
     modalOtherProduct.classList.add("slide-in-blurred-bl");
+    if (count >= 1) {
+        qtyBasket.style.background = "orange";
+    } else {
+        qtyBasket.style.background = "none";
+    }
 
 });
 
 for (const close of closeModalBasket) {
-    close.addEventListener('click', ()=>{
+    close.addEventListener('click', () => {
         modalOtherProduct.classList.add("slide-out-br");
         modalOtherProduct.classList.remove("slide-in-blurred-bl");
     });
@@ -84,8 +94,8 @@ shoes.addEventListener('mousemove', shoesParallax);
  */
 for (let i = 0; i < shoesChoices.length; i++) {
     const element = shoesChoices[i];
-    
-    element.addEventListener('click', (e)=>{
+
+    element.addEventListener('click', (e) => {
         if (e.target.dataset.value !== shoes.getAttribute('src')) {
             shoes.classList.add('roll-out-bottom');
             shoes.classList.remove('roll-in-top');
@@ -106,29 +116,29 @@ for (let i = 0; i < shoesChoices.length; i++) {
 const shoesOliveSrc = ["/img/nikeoilve.jpeg", "/img/nikeoliveback.jpg", "/img/nikeolivetop.jpg", "/img/nikeolivebottom.jpg"];
 const shoesBrownSrc = ["/img/nikebrun.jpg", "/img/nikebruntwo.jpg", "/img/nikebruntop.jpg", "/img/nikebrunbottom.jpg"];
 const shoesGreySrc = ["/img/nikegrey.png", "/img/nikegreyback.png", "/img/nikegreytop.png", "/img/nikegreybottom.png"];
-const shoesPastelSrc = [ "/img/preview4.jpeg","/img/preview1.jpeg", "/img/preview3.jpeg", "/img/preview2.jpeg",];
+const shoesPastelSrc = ["/img/preview4.jpeg", "/img/preview1.jpeg", "/img/preview3.jpeg", "/img/preview2.jpeg", ];
 
-function changeImgSrc(e){
+function changeImgSrc(e) {
     switch (e.target.dataset.picture) {
         case '1':
-            for (let i = 0; i < 4; i++) { 
-                imgDescriptions[i].src =  shoesGreySrc[i];
-             }
-          break;
+            for (let i = 0; i < 4; i++) {
+                imgDescriptions[i].src = shoesGreySrc[i];
+            }
+            break;
         case '2':
-            for (let i = 0; i < 4; i++) { 
-                imgDescriptions[i].src =  shoesOliveSrc[i];
-             }
-          break;
+            for (let i = 0; i < 4; i++) {
+                imgDescriptions[i].src = shoesOliveSrc[i];
+            }
+            break;
         case '3':
-            for (let i = 0; i < 4; i++) { 
-                imgDescriptions[i].src =  shoesBrownSrc[i];
-             }
-          break;
+            for (let i = 0; i < 4; i++) {
+                imgDescriptions[i].src = shoesBrownSrc[i];
+            }
+            break;
         case '4':
-            for (let i = 0; i < 4; i++) { 
-                imgDescriptions[i].src =  shoesPastelSrc[i];
-             }
+            for (let i = 0; i < 4; i++) {
+                imgDescriptions[i].src = shoesPastelSrc[i];
+            }
         default:
     };
 };
@@ -225,5 +235,3 @@ function observeScroll() {
         };
     });
 };
-
-

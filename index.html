@@ -13,44 +13,10 @@
     <title>NIKE | NIKE Air Max 90 Futura</title>
   </head>
   <body>
-
+    <!-- MODAL SHOES FULLSCREEN -->
     <div class="modal-img-fullscreen none">
       <img id="imgFullScreen" src="/img/nikeoilve.jpeg" alt="Article nike en pleine ecran">
     </div>
-      <!-- MODAL SELECT other product -->
-      <section class="modal-other-product none">
-        <div class="content-other-product">
-          <div class="header-other-product">
-            <p class="title">Pour compléter votre tenue</p>
-            <button class="close-modal-basket" id="closeModalOtherProduct">x</button>
-          </div>
-          <div class="other-product">
-            <div>
-              <div>
-                <img src="/img/sacochenike.jpg" alt="Sacoche nike" srcset="">
-              </div>
-              <p>Bandoulière</p>
-            </div>
-            <div>
-              <div>
-                <img src="/img/bonnet.jpg" alt="Sacoche nike" srcset="">
-              </div>
-              <p>Bonnet</p>
-            </div>
-              <div>
-                <div>
-                  <img src="/img/chaussette.jpg" alt="Sacoche nike" srcset="">
-                </div>
-                <p>Chaussettes</p>
-              </div>
-          </div>
-          <div class="purchase-order">
-            <button class="close-modal-basket">Continuer mes achats</button>
-            <button class="close-modal-basket">Continuer vers mon pannier</button>
-          </div>
-        </div>
-      </section>
-
     <!-- MODAL SIZE SHOES-->
     <aside class="modal none">
       <div class="modal-size">
@@ -135,7 +101,7 @@
       <!-- IMG SHOES PRINCIPAL -->
       <section class="article-content">
         <article class="shoes-content">
-          <div class="piou">
+          <div class="principal-shoes">
             <div data-speed="2000" id="bgShoes" class="shoes-bg"></div>
             <img data-speed="1" id="shoes" class="shoes" src="/img/shoes1.png" alt="chaussure nike image principal" srcset="">
           </div>
@@ -149,7 +115,7 @@
           </div>
           <div title="Sélectionnez une couleur" class="choice-color-shoes">
             <div data-picture="4" data-bg="linear-gradient(#ffaadd, #c5e8e3)" data-value="/img/shoes1.png" class="shoes-color bg-4"></div>
-            <div data-picture="1" data-bg="linear-gradient(to right, grey, #e2e2e2)" data-value="/img/shoes4.png"  class="shoes-color bg-1"></div>
+            <div data-picture="1" data-bg="linear-gradient(to right, grey, #e2e2e2)" data-value="/img/shoes4.png" class="shoes-color bg-1"></div>
             <div data-picture="2" data-bg="linear-gradient(to right, #6d6027, #d3cbb8)" data-value="/img/shoes3.png" class="shoes-color bg-2"></div>
             <div data-picture="3" data-bg="linear-gradient(to right, #d1913c, #ffd194)" data-value="/img/shoes2.png" class="shoes-color bg-3"></div>
           </div>
@@ -173,14 +139,15 @@
             </div>
           </div>
           <div class="shop">
-            <button id="addBasket">AJOUTER AU PANNIER <i class="bi bi-basket3"></i></button>
+            <button id="addBasket">AJOUTER AU PANNIER <i class="bi bi-basket3"></i>
+            </button>
           </div>
         </article>
       </section>
       <!-- SHOES IMAGES -->
       <section class="images-description">
         <div class="images">
-          <img  class="img-presentation click-fullscreen" src="/img/preview4.jpeg" alt="chaussures nike de profil">
+          <img class="img-presentation click-fullscreen" src="/img/preview4.jpeg" alt="chaussures nike de profil">
           <img class="img-presentation click-fullscreen" src="/img/preview3.jpeg" alt="chaussures nike de dos">
           <img class="img-presentation click-fullscreen" src="/img/preview1.jpeg" alt="chaussures nike de face">
           <img class="img-presentation click-fullscreen" src="/img/preview2.jpeg" alt="chaussures nike vue de dessous">
@@ -245,6 +212,7 @@
               <div class="users-comments">
                 <div>
                   <p>Très belle chaussures, taille parfaitement</p>
+                  <img class="click-fullscreen" src="/img/commentnike.jpg" alt="photo d'avis clients">
                   <p class="date">03/12/2022</p>
                 </div>
                 <div>
@@ -335,7 +303,44 @@
           </a>
         </div>
       </section>
+      <p class="propulse">Propulsé par Helmi</p>
     </footer>
+    <!-- MODALS START -->
+    <!-- MODAL SELECT other product -->
+    <section class="modal-other-product none">
+      <div class="content-other-product">
+        <div class="header-other-product">
+          <p class="title">Pour compléter votre tenue</p>
+          <div>
+            <button class="close-modal-basket" id="closeModalOtherProduct">x</button>
+          </div>
+        </div>
+        <div class="other-product">
+          <div>
+            <div>
+              <img src="/img/sacochenike.jpg" alt="Sacoche nike">
+            </div>
+            <p>Bandoulière</p>
+          </div>
+          <div class="bonnet">
+            <div>
+              <img src="/img/bonnet.jpg" alt="Sacoche nike">
+            </div>
+            <p>Bonnet</p>
+          </div>
+          <div class="socket">
+            <div>
+              <img src="/img/chaussette.jpg" alt="Sacoche nike">
+            </div>
+            <p>Chaussettes</p>
+          </div>
+        </div>
+        <div class="purchase-order">
+          <button class="close-modal-basket">Continuer mes achats</button>
+          <button class="close-modal-basket">Continuer vers mon pannier</button>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="js/script.js"></script>
   <script src="js/sizemodal.js"></script>

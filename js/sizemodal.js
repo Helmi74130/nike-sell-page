@@ -11,8 +11,8 @@ let body = document.querySelector('body');
  */
 sizes.addEventListener('click', () => {
     modal.classList.remove("none");
-    modalSize.classList.add("slide-in-right");
-    modalSize.classList.remove("slide-out-right");
+    modalSize.classList.add("right-slide");
+    modalSize.classList.remove("right-slide-out");
 });
 
 buttonCloseModalSize.addEventListener('click', () => {
@@ -28,8 +28,8 @@ modalSizeSelect.forEach(function(button) {
 });
 
 function closeSizeModal() {
-    modalSize.classList.remove("slide-in-right");
-    modalSize.classList.add("slide-out-right");
+    modalSize.classList.remove("right-slide");
+    modalSize.classList.add("right-slide-out");
     setTimeout(() => {
         modal.classList.add("none");
     }, "600");

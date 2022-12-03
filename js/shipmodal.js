@@ -16,23 +16,23 @@ buttonCloseModalshipment.addEventListener('click', () => {
 });
 
 function closeModal() {
-    modalShipment.classList.add("swing-out-top-bck");
+    modalShipment.classList.add("rotate-out");
     setTimeout(() => {
         modalShipment.classList.add('none');
         shoesDescriptionContent.classList.remove("none");
-        modalShipment.classList.remove("swing-out-top-bck");
+        modalShipment.classList.remove("rotate-out");
         modalShipment.classList.remove("swing-in-top-fwd");
         shoesDescriptionContent.classList.add("swing-in-top-fwd");
     }, "700");
 };
 
 function openModal() {
-    shoesDescriptionContent.classList.add("swing-out-top-bck");
+    shoesDescriptionContent.classList.add("rotate-out");
     setTimeout(() => {
         modalShipment.classList.remove("none");
         shoesDescriptionContent.classList.add('none');
         modalShipment.classList.add("swing-in-top-fwd");
-        shoesDescriptionContent.classList.remove("swing-out-top-bck");
+        shoesDescriptionContent.classList.remove("rotate-out");
         shoesDescriptionContent.classList.remove("swing-in-top-fwd");
     }, "700");
 };

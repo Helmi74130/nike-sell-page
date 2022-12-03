@@ -91,7 +91,6 @@ header .header-basket .qty-basket {
   height: 20px;
   width: 20px;
   font-size: 1.3em;
-  border: 1px solid white;
   border-radius: 50%;
 }
 
@@ -221,6 +220,7 @@ header .responsive-button:hover {
 }
 
 .modal-other-product .content-other-product {
+  width: 60%;
   position: absolute;
   padding: 30px;
   background: #f8f8f4;
@@ -231,6 +231,14 @@ header .responsive-button:hover {
           transform: translate(-50%, -50%);
 }
 
+.modal-other-product .content-other-product .other-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .modal-other-product .content-other-product .header-other-product {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -238,6 +246,12 @@ header .responsive-button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.modal-other-product .content-other-product .header-other-product .close-modal-basket {
+  margin-bottom: 50px;
+  background: none;
+  color: #000;
 }
 
 .modal-other-product .content-other-product .title {
@@ -264,6 +278,7 @@ header .responsive-button:hover {
   padding: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 .modal-other-product .content-other-product button:hover {
@@ -344,7 +359,7 @@ header .responsive-button:hover {
           align-items: center;
 }
 
-.shoes-content .piou {
+.shoes-content .principal-shoes {
   position: relative;
 }
 
@@ -774,13 +789,22 @@ header .responsive-button:hover {
   font-size: 0.7em;
   background-color: #c0bcb4;
   width: 80%;
-  height: 200px;
   border-radius: 10px;
   padding: 20px;
 }
 
 .modal-comments .users-comments .date {
   font-size: 0.7em;
+}
+
+.modal-comments .users-comments img {
+  width: 50px;
+  height: 50px;
+}
+
+.modal-comments .users-comments img:hover {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .modal-comments .users-comments button {
@@ -847,7 +871,7 @@ header .responsive-button:hover {
           align-items: center;
   font-family: "argon_demoregular";
   line-height: 1.5em;
-  font-size: calc(0.5vw + 1vh + 1vmin);
+  font-size: calc(0.3vw + 1vh + 1vmin);
 }
 
 .images-description .description h2 {
@@ -1010,6 +1034,12 @@ footer .social .social-links a:hover {
   color: chocolate;
 }
 
+footer .propulse {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+
 @media only screen and (max-width: 1250px) {
   .header-nav {
     z-index: 10;
@@ -1100,6 +1130,16 @@ footer .social .social-links a:hover {
   .modal-img-fullscreen img {
     width: 80%;
   }
+  .modal-other-product .content-other-product {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-other-product img {
+    width: 150px;
+    height: 200px;
+  }
 }
 
 @media only screen and (max-width: 657px) {
@@ -1164,8 +1204,13 @@ footer .social .social-links a:hover {
     text-align: center;
   }
   .modal-comments .modal-comments-content {
-    margin-left: 5px;
+    margin-left: 15px;
     text-align: center;
+    width: 94%;
+    margin-top: 30px;
+  }
+  .socket {
+    display: none;
   }
 }
 
@@ -1183,6 +1228,9 @@ footer .social .social-links a:hover {
   }
   .modal .modal-size .modal-sizes-select .button-content button {
     padding: 15px 30px;
+  }
+  .bonnet {
+    display: none;
   }
 }
 
@@ -1203,17 +1251,17 @@ body {
   background: #f8f8f4;
 }
 
-.slide-in-right {
+.right-slide {
   -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.slide-out-right {
+.right-slide-out {
   -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.swing-out-top-bck {
+.rotate-out {
   -webkit-animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
           animation: swing-out-top-bck 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
 }
