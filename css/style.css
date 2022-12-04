@@ -19,6 +19,39 @@
   font-style: normal;
 }
 
+.section-more {
+  margin-top: 60px;
+}
+
+.section-more h4 {
+  font-family: 'starife_demoregular';
+  font-size: calc(1.5vw + 4vh + 2vmin);
+  text-align: center;
+}
+
+.section-more .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  overflow-x: scroll;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-top: 50px;
+}
+
+.section-more .more::-webkit-scrollbar {
+  width: 0;
+}
+
+.section-more .more div {
+  height: 100%;
+}
+
+.section-more .more div img {
+  height: 400px;
+}
+
 .modal-img-fullscreen {
   position: fixed;
   display: -webkit-box;
