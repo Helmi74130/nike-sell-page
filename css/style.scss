@@ -45,9 +45,19 @@ $bgcolor: #f8f8f4;
     margin-top: 50px;
     &::-webkit-scrollbar { width: 0 }
     div{
+      text-align: center;
       height: 100%;
       img{
         height: 400px;
+        transition: 0.3s;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+      p{
+        margin-top: 20px;
+        font-family: "mortal_waveregular";
+        font-size: calc(0.1vw + 2vh + 2vmin);
       }
     }
   }

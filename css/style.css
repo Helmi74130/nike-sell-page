@@ -45,11 +45,25 @@
 }
 
 .section-more .more div {
+  text-align: center;
   height: 100%;
 }
 
 .section-more .more div img {
   height: 400px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.section-more .more div img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.section-more .more div p {
+  margin-top: 20px;
+  font-family: "mortal_waveregular";
+  font-size: calc(0.1vw + 2vh + 2vmin);
 }
 
 .modal-img-fullscreen {
