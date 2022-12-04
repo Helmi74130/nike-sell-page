@@ -32,7 +32,7 @@ $bgcolor: #f8f8f4;
 
 .section-more{
   margin-top: 60px;
-  h4{
+  h3{
     font-family: 'starife_demoregular';
     font-size: calc(1.5vw + 4vh + 2vmin);
     text-align: center;
@@ -701,11 +701,17 @@ header {
     .text-description {
       margin-top: 30px;
     }
+    .free-ship{
+      margin-top: 20px;
+    }
   }
   .detail-description {
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid $lightbrown;
+    .title-description{
+      margin-bottom: 20px;
+    }
   }
   .comment-shipment {
     display: flex;
@@ -713,8 +719,11 @@ header {
     margin-top: 20px;
     .shipment {
       color: chocolate;
+      transition: 0.3s;
       &:hover {
         cursor: pointer;
+        transform: scale(1.2);
+        color: #000;
       }
     }
     small {
@@ -723,13 +732,19 @@ header {
   }
   #opinion {
     color: chocolate;
+    transition: 0.3s;
     &:hover {
       cursor: pointer;
+      transform: scale(1.2);
+        color: #000;
     }
     small {
       color: grey;
     }
   }
+}
+.subrillance{
+  font-weight: 600;
 }
 
 //FOOTER
@@ -739,7 +754,7 @@ footer {
   margin-top: 100px;
   .information {
     margin-top: 10px;
-    h3 {
+    h4 {
       padding-top: 50px;
       font-size: calc(8vw + 1vh + 1vmin);
       font-family: "mortal_waveregular";

@@ -23,7 +23,7 @@
   margin-top: 60px;
 }
 
-.section-more h4 {
+.section-more h3 {
   font-family: 'starife_demoregular';
   font-size: calc(1.5vw + 4vh + 2vmin);
   text-align: center;
@@ -954,10 +954,18 @@ header .responsive-button:hover {
   margin-top: 30px;
 }
 
+.images-description .description .free-ship {
+  margin-top: 20px;
+}
+
 .images-description .detail-description {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #c0bcb4;
+}
+
+.images-description .detail-description .title-description {
+  margin-bottom: 20px;
 }
 
 .images-description .comment-shipment {
@@ -971,10 +979,15 @@ header .responsive-button:hover {
 
 .images-description .comment-shipment .shipment {
   color: chocolate;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .images-description .comment-shipment .shipment:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #000;
 }
 
 .images-description .comment-shipment small {
@@ -983,14 +996,23 @@ header .responsive-button:hover {
 
 .images-description #opinion {
   color: chocolate;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .images-description #opinion:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #000;
 }
 
 .images-description #opinion small {
   color: grey;
+}
+
+.subrillance {
+  font-weight: 600;
 }
 
 footer {
@@ -1003,7 +1025,7 @@ footer .information {
   margin-top: 10px;
 }
 
-footer .information h3 {
+footer .information h4 {
   padding-top: 50px;
   font-size: calc(8vw + 1vh + 1vmin);
   font-family: "mortal_waveregular";
