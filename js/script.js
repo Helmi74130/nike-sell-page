@@ -1,29 +1,9 @@
-let qtyNumber = document.querySelector('#qtyNumber');
-let btnLessQty = document.querySelector('#btnLessQty');
-let btnMoreQty = document.querySelector('#btnMoreQty');
-let qtyHeaderBasket = document.querySelector('#qtyHeaderBasket');
-let addBasketButton = document.querySelector('#addBasket');
-let shoes = document.querySelector('#shoes');
-let bgShoes = document.querySelector('#bgShoes');
-let descriptionContent = document.querySelector('.description');
-let footer = document.querySelector('#footer');
-let images = document.querySelector('.images');
-let lastImg = document.querySelector('#lastImg');
-let btnHeader = document.querySelector('.responsive-button');
-let headerNav = document.querySelector('.header-nav');
-let shoesChoices = document.querySelectorAll('.shoes-color');
-let imgDescriptions = document.querySelectorAll('.img-presentation');
-let modalOtherProduct = document.querySelector('.modal-other-product');
+/* 
+* Open Modal FullScreen Shoes
+*/
 let modalImgFullscreen = document.querySelector('.modal-img-fullscreen');
-let closeModalBasket = document.querySelectorAll('.close-modal-basket');
 let clickFullScreens = document.querySelectorAll('.click-fullscreen');
 let imgFullScreen = document.querySelector('#imgFullScreen');
-let qtyBasket = document.querySelector('.qty-basket');
-
-
-/* 
- * Open Modal FullScreen Shoes
- */
 
 for (const clickFullScreen of clickFullScreens) {
     clickFullScreen.addEventListener('click', (e) => {
@@ -38,6 +18,14 @@ modalImgFullscreen.addEventListener("click", () => {
 /* 
  * Allows to increment a counter and to decrement when clicking on a button
  */
+let qtyNumber = document.querySelector('#qtyNumber');
+let btnLessQty = document.querySelector('#btnLessQty');
+let btnMoreQty = document.querySelector('#btnMoreQty');
+let qtyHeaderBasket = document.querySelector('#qtyHeaderBasket');
+let addBasketButton = document.querySelector('#addBasket');
+let modalOtherProduct = document.querySelector('.modal-other-product');
+let closeModalBasket = document.querySelectorAll('.close-modal-basket');
+let qtyBasket = document.querySelector('.qty-basket');
 
 let count = 0;
 qtyNumber.textContent = count;
@@ -77,6 +65,9 @@ for (const close of closeModalBasket) {
 /* 
  * This function allows to give an effect to the image as well as to the BG according to the position of the mouse
  */
+let shoes = document.querySelector('#shoes');
+let bgShoes = document.querySelector('#bgShoes');
+
 function shoesParallax(e) {
     const speed = shoes.getAttribute('data-speed');
 
@@ -92,6 +83,8 @@ shoes.addEventListener('mousemove', shoesParallax);
 /* 
  * Allows you to modify the main image with an effect
  */
+let shoesChoices = document.querySelectorAll('.shoes-color');
+
 for (let i = 0; i < shoesChoices.length; i++) {
     const element = shoesChoices[i];
 
@@ -113,6 +106,8 @@ for (let i = 0; i < shoesChoices.length; i++) {
 /* 
  * This function allows you to switch the source images
  */
+let imgDescriptions = document.querySelectorAll('.img-presentation');
+
 const shoesOliveSrc = ["/img/nikeoilve.webp", "/img/nikeoliveback.webp", "/img/nikeolivetop.webp", "/img/nikeolivebottom.webp"];
 const shoesBrownSrc = ["/img/nikebrun.webp", "/img/nikebruntwo.webp", "/img/nikebruntop.webp", "/img/nikebrunbottom.webp"];
 const shoesGreySrc = ["/img/nikegrey.webp", "/img/nikegreyback.webp", "/img/nikegreytop.webp", "/img/nikegreybottom.webp"];
@@ -147,6 +142,10 @@ function changeImgSrc(e) {
  * RESPONSIVE CODE
  * This event listener allows to change the behavior according to the size of the screen
  */
+let descriptionContent = document.querySelector('.description');
+let btnHeader = document.querySelector('.responsive-button');
+let headerNav = document.querySelector('.header-nav');
+
 window.addEventListener('resize', function(e) {
     let screenSizes = e.target.innerWidth;
 
@@ -196,6 +195,9 @@ btnHeader.addEventListener('click', () => {
  * These functions make the description sticky and change the behavior to responsive
  */
 
+let images = document.querySelector('.images');
+let lastImg = document.querySelector('#lastImg');
+
 function toggleFixedClass() {
     window.addEventListener('scroll', () => {
         if (images.getBoundingClientRect().y < 0 && images.getBoundingClientRect().y < 100) {
@@ -235,3 +237,188 @@ function observeScroll() {
         };
     });
 };
+
+
+/* 
+*Allows you to move the carousel
+ */
+let slider = document.querySelector('.more');
+
+let starting;
+let scrollLeft;
+let mouse = false;
+
+function catchSlider(e) {
+  starting = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+  mouse = true;
+};
+function releaseSlider() {
+  mouse = false;
+};
+
+slider.addEventListener('mousemove', (e) => {
+  e.preventDefault();
+  if(!mouse) { return; };
+  let x = e.pageX - slider.offsetLeft;
+  let scroll = x - starting;
+  slider.scrollLeft = scrollLeft - scroll;
+  
+});
+
+slider.addEventListener('mousedown', catchSlider, false);
+slider.addEventListener('mouseup', releaseSlider, false);
+slider.addEventListener('mouseleave', releaseSlider, false);
+
+
+/* 
+ * This function allows to shift the carousel by 1px on each call
+ */
+
+let speed = 1;
+
+function loopTime(){
+  let sizeForScroll = slider.scrollLeft + slider.offsetWidth
+  if ( sizeForScroll < slider.scrollWidth) {
+    setTimeout(() => {
+      slider.scrollLeft += speed;
+      loopTime() 
+    }, "50");
+  }else{
+    setTimeout(()=>{
+      slider.scrollLeft = 0;
+    loopTime();
+    }, '5000');
+    
+  };
+};
+
+loopTime();
+
+/* 
+ * These 2 functions open or close the comments modal
+ */
+
+let opinion = document.querySelector('#opinion');
+let modalComments = document.querySelector('.modal-comments');
+let buttonCloseModalComments = document.querySelector('#buttonCloseModalcomments');
+let shoesDescriptionContents = document.querySelector('.shoes-description-content');
+
+
+opinion.addEventListener('click', () => {
+    openModalComments();
+});
+
+buttonCloseModalComments.addEventListener('click', () => {
+    closeModalComments();
+});
+
+function closeModalComments() {
+    modalComments.classList.add("rotate-exit");
+    setTimeout(() => {
+        modalComments.classList.add('none');
+        shoesDescriptionContents.classList.remove("none");
+        modalComments.classList.remove("rotate-exit");
+        modalComments.classList.remove("swing-entrance");
+        shoesDescriptionContents.classList.add("swing-entrance");
+    }, "700");
+};
+
+function openModalComments() {
+    shoesDescriptionContents.classList.add("rotate-exit");
+    setTimeout(() => {
+        modalComments.classList.remove("none");
+        shoesDescriptionContents.classList.add('none');
+        modalComments.classList.add("swing-entrance");
+        shoesDescriptionContents.classList.remove("rotate-exit");
+        shoesDescriptionContents.classList.remove("swing-entrance");
+    }, "700");
+};
+
+
+/* 
+ * These 2 functions open or close the shipment modal
+ */
+
+let shipment = document.querySelector('#shipment');
+let modalShipment = document.querySelector('.modal-shipment');
+let buttonCloseModalshipment = document.querySelector('#buttonCloseModalshipment');
+let shoesDescriptionContent = document.querySelector('.shoes-description-content');
+
+shipment.addEventListener('click', () => {
+    openModal();
+});
+
+buttonCloseModalshipment.addEventListener('click', () => {
+    closeModal();
+});
+
+function closeModal() {
+    modalShipment.classList.add("rotate-exit");
+    setTimeout(() => {
+        modalShipment.classList.add('none');
+        shoesDescriptionContent.classList.remove("none");
+        modalShipment.classList.remove("rotate-exit");
+        modalShipment.classList.remove("swing-entrance");
+        shoesDescriptionContent.classList.add("swing-entrance");
+    }, "700");
+};
+
+function openModal() {
+    shoesDescriptionContent.classList.add("rotate-exit");
+    setTimeout(() => {
+        modalShipment.classList.remove("none");
+        shoesDescriptionContent.classList.add('none');
+        modalShipment.classList.add("swing-entrance");
+        shoesDescriptionContent.classList.remove("rotate-exit");
+        shoesDescriptionContent.classList.remove("swing-entrance");
+    }, "700");
+};
+
+
+/* 
+ * These 2 functions open or close the sizes modal
+ */
+
+let sizes = document.querySelector('.sizes');
+let modalSize = document.querySelector('.modal-size');
+let buttonCloseModalSize = document.querySelector('#buttonCloseModalSize');
+let modalSizeSelect = document.querySelectorAll('.button-size');
+let textSizeUserSelect = document.querySelector('#textSizeUserSelect');
+let modal = document.querySelector('.modal');
+let body = document.querySelector('body');
+
+
+sizes.addEventListener('click', () => {
+    modal.classList.remove("none");
+    modalSize.classList.add("right-entrance");
+    modalSize.classList.remove("right-exit");
+});
+
+buttonCloseModalSize.addEventListener('click', () => {
+    closeSizeModal();
+});
+
+modalSizeSelect.forEach(function(button) {
+    button.addEventListener('click', (event) => {
+        let userSizeSelect = event.target.textContent;
+        textSizeUserSelect.textContent = userSizeSelect;
+        closeSizeModal();
+    });
+});
+
+function closeSizeModal() {
+    modalSize.classList.remove("right-slide");
+    modalSize.classList.add("right-exit");
+    setTimeout(() => {
+        modal.classList.add("none");
+    }, "600");
+};
+
+function outsideClick(e) {
+    if (e.target === modal) {
+        closeSizeModal();
+    };
+};
+
+window.addEventListener('click', outsideClick);
